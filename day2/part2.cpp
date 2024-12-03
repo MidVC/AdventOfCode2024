@@ -49,34 +49,24 @@ int main() {
     while (getline(cin, line)) {
         istringstream iss(line); 
 
-        int num, prev;
-        iss >> prev >> num;
-        bool increasing = true, flag = true, tolerate = true;
-        if (prev == num) {
-
-        }
-        else if (abs(num - prev) > 3) continue;
-
-        if (prev - num > 0) increasing = false;
-
-        prev = num;
-
+        int num;
+        vector<int> linenums;
         while (iss >> num) {
-            if (num == prev){
-                flag = false;
-                break;
-            }
-            else if (abs(num - prev) > 3) {
-                flag = false;
-                break;
-            }
-            else if (((num < prev) && increasing) || ((num > prev) && !increasing)){
-                flag = false;
-                break;
-            }
-            prev = num;
+            linenums.push_back(num);
         }
-        if (flag) count++;
+
+        int result = check(linenums);
+        if (result == -1) count++;
+        else{
+            for (int i = 0; i < linenums.size(); ++i) {
+                vector<int> erasethis = linenums;
+                erasethis.erase(erasethis.begin()+i);
+                if (check(erasethis) == -1) {
+                    count++;
+                    break;
+                }
+            }
+        }
     }
 
     cout << count << endl;
