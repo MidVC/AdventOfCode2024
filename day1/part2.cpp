@@ -1,5 +1,5 @@
 /**
- * Advent of Code 2024 - Day [X]
+ * Advent of Code 2024 - Day [1]
  * Solution by: [Your Name]
  * Repository: https://github.com/MidVC/AdventOfCode2024
  */
