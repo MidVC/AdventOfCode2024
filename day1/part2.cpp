@@ -14,5 +14,21 @@
 using namespace std;
 
 int main() {
+    int a, b;
+    vector<int> l1;
     
+    int ht[100000] = {0};
+    while (cin >> a >> b) {
+        l1.push_back(a);
+        ht[b]++;
+    }
+
+    
+
+    int sum = 0;
+    for (int i = 0; i < l1.size(); ++i) {
+        sum += l1[i] * ht[l1[i]];
+    }
+    
+    cout << sum << endl;
 }
