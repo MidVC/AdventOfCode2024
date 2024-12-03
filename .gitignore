@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+
+# Allow .cpp files in all folders
+!*.cpp
+
+# Allow README.md and .gitignore in the root directory
+!README.md
+!.gitignore
+
+# Allow directories (so that .cpp files in subdirectories can be included)
+!*/
