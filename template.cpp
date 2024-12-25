@@ -1,6 +1,6 @@
 /**
  * Advent of Code 2024 - Day [X]
- * Solution by: [Your Name]
+ * Solution by: MidC
  * Repository: https://github.com/MidVC/AdventOfCode2024
  */
 
